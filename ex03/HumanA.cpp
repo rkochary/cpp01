@@ -8,5 +8,5 @@ HumanA::HumanA(std::string str,Weapon& type)
 
 void HumanA::attack()
 {
-   std::cout << name << " attacks with their " << weapon << std::endl;
+   std::cout << name << " attacks with their " << weapon->getType() << std::endl;
 }

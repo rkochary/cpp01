@@ -7,8 +7,8 @@
 class HumanB
 {
     public:
-        HumanB(std::string n);
-        ~HumanB();
+        HumanB(std::string);
+       // ~HumanB();
         void attack();
         void setWeapon(Weapon&);
     private:
