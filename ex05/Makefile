@@ -1,4 +1,4 @@
-NAME		= brain
+NAME		= harl
 
 SRCS		= $(wildcard *.cpp)
 

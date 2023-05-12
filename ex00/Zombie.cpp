@@ -3,12 +3,12 @@
 Zombie::Zombie(std::string str)
 {
     name = str;
-    std::cout << name << "is created" << std::endl;
+    std::cout << name << " is created" << std::endl;
 }
 
 Zombie::~Zombie()
 {
-
+    std::cout<<name<<" is died"<<std::endl;
 }
 
 Zombie* newZombie(std::string name)

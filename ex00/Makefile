@@ -10,7 +10,7 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 RM			= rm -rf
 
-%.o : %.cpp %.hpp
+%.o : %.cpp
 			$(CC) $(CFLAGS) -o $@ -c $<
 
 all:		$(NAME)

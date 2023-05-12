@@ -2,12 +2,12 @@
 
 Zombie::Zombie()
 {
-    // std::cout << name << ":" << "is created"<<std::endl;
+    
 }
 
 Zombie::~Zombie()
 {
-
+     
 }
 
 void Zombie::announce()
