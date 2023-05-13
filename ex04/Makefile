@@ -20,6 +20,7 @@ $(NAME):	$(OBJS)
 
 clean:
 			$(RM) $(OBJS)
+			$(RM) *.replaced
 
 fclean:		clean
 			$(RM) $(NAME)

@@ -1,5 +1,4 @@
 #include "Replace.hpp"
-using namespace std;
 
 Replace::Replace(std::string file,std::string first,std::string second)
 {
@@ -8,23 +7,21 @@ Replace::Replace(std::string file,std::string first,std::string second)
     s2 = second;
 }
 
-void Replace::replaceStr()
+void Replace::replaceStr() const
 {
-    ifstream infile(fileName.c_str());
-    ofstream outfile(fileName+ ".replaced");
+    std::ifstream infile(fileName.c_str());
+    std::ofstream outfile(fileName+ ".replaced");
     std::string content;
     int    pos = 0;
-    string result;
-    string line;
+    std::string result;
+    std::string line;
     if (!infile.is_open())
     {
         std::cerr <<" ERROR: No such file or directory !" << std::endl;
         exit(1);
     }
-    // if (getline(infile, content, '\0'))
-    // {
-        while(getline(infile, line)) // allowed?
-            result += line + '\n'; // uxxel
+        while(getline(infile, line)) 
+            result += line + '\n'; 
         for (int i = 0; result[i] != '\0'; i++)
         {
             pos = result.find(s1, pos);
@@ -34,12 +31,5 @@ void Replace::replaceStr()
             result.insert(pos, s2);
             pos += s2.length() - 1;
         }
-        outfile << result << endl;
-    // }
-    // else
-    // {
-    //     std::cerr << " ERROR: File is empty !" << std::endl;
-    //     infile.close();
-    //     exit (2);
-    // }
+        outfile << result << std::endl;
 }

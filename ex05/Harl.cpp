@@ -34,7 +34,7 @@ void Harl::complain(std::string level)
     std::string levels[4] = {"DEBUG","INFO","WARNING","ERROR"};
     void (Harl::*funcPtr[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     int i = 0;
-    for( ; i < 5 && level.compare(levels[i]);i++)
+    for( ; i < 5 && level.compare(levels[i]);i++);
     if (i > 3)
 	    return ;
 	(this->*funcPtr[i])();

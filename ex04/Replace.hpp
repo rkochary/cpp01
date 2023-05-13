@@ -7,8 +7,8 @@
 class Replace
 {
     public:
-        Replace(std::string,std::string,std::string);
-        void replaceStr();
+        Replace(std::string, std::string, std::string);
+        void replaceStr() const;
 
     private:
         std::ifstream infile;
